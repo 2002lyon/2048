@@ -1,7 +1,7 @@
-var board;
-var score = 0;
-var rows = 4;
-var columns = 4;
+let board;
+let score = 0;
+let rows = 4;
+let columns = 4;
 
 window.onload = function() {
     setGame();
@@ -37,17 +37,30 @@ function setGame() {
 
 }
 
+
+function gameOver(num) {
+    if (num === 2048) {
+        alert("You won");
+        location.reload();
+    } else {
+        return
+    } 
+}
+
+function reset() {
+    location.reload();
+}
+
 function updateTile(tile, num) {
     tile.innerText = "";
     tile.classList.value = ""; //clear the classList
     tile.classList.add("tile");
     if (num > 0) {
         tile.innerText = num.toString();
-        if (num <= 32) {
+        if (num <= 4096) {
             tile.classList.add("x"+num.toString());
-            gameOver(num);
         } else {
-            tile.classList.add("x4096");
+            tile.classList.add("x8192");
         }                
     }
 }
@@ -72,21 +85,6 @@ document.addEventListener('keyup', (e) => {
     }
     document.getElementById("score").innerText = score;
 })
-
-
-
-function gameOver(num) {
-    if (num === 2048) {
-        alert("You won");
-        location.reload();
-    } else {
-        return
-    } 
-}
-
-function reset() {
-    location.reload();
-}
 
 function filterZero(row){
     return row.filter(num => num != 0); //create new array of all nums != 0
