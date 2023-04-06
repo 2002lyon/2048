@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;800&family=Poppins:wght@400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+:root{
+    --tile: 95px;
+    --board: 25rem;
+    --board-back: ##cdc1b5;
+    --border: #bbada0;
+    --x2: #eee4da;
+    --x4: #ece0ca;
+    --x8: #f4b17a;
+    --x16: #f59597;
+    --x32: #f57c5f;
+    --x64: #f65d3b;
+    --x128: #edce71;
+    --x256: #edcc63;
+    --x512: #edc651;
+    --x1024: #eec744;
+    --x2048: #ecc230;
+    --x4096: #fe3d3d;
+    --light-black: #727371;
+    --white: #fff;
+}
+
+body{
+    text-align: center;
+}
+
+#board{
+    width: var(--board);
+    height: var(--board);
+    background-color: var(--board-back);
+    border: 5px solid var(--border);
+    margin: 0 auto;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.tile{
+    width: var(--tile);
+    height: var(--tile);
+    aspect-ratio: 1/1;
+    border: 5px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.x2{
+    background-color: var(--x2);
+    color: var(--light-black);
+}
+
+.x4{
+    background-color: var(--x4) ;
+    color: var(--light-black);
+}
+
+.x8{
+    background-color: var(--x8);
+    color: var(--white);
+}
+.x16{
+    background-color: var(--x16);
+    color: var(--white);
+}
+.x32{
+    background-color: var(--x32);
+    color: var(--white);
+}
+.x64{
+    background-color: var(--x64);
+    color: var(--white);
+}
+.x128{
+    background-color: var(--x128);
+    color: var(--white);
+}
+.x256{
+    background-color: var(--x256);
+    color: var(--white);
+}
+.x512{
+    background-color: var(--x512);
+    color: var(--white);
+}
+.x1024{
+    background-color: var(--x1024);
+    color: var(--white);
+}
+
+.x2048{
+    background-color: var(--x2048);
+    color: var(--white);
+}
+
+.x4096{
+    background-color: var(--x4098);
+    color: var(--white);
+}
+
+.container{
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin: 0 auto;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.game__header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn{
+    padding: .8rem 1.8rem;
+    color: var(--white);
+    background-color: #ecc230;
+    border: none;
+    border-radius: 3px;
+}
+
+
